@@ -6,8 +6,8 @@ jobs:
       - checkout
 
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-      - run: docker build -t hnclonecphb/backend:$CIRCLE_BRANCH .
-      - run: docker push hnclonecphb/backend:$CIRCLE_BRANCH
+      - run: docker build -t hnclonecphb/database:$CIRCLE_BRANCH .
+      - run: docker push hnclonecphb/database:$CIRCLE_BRANCH
   
   deploy:
     machine:
