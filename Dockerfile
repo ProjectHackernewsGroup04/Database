@@ -1,2 +1,2 @@
-FROM mongo:4.1-xenial
+FROM mongo:4.0.2-xenial
 
