@@ -19,7 +19,7 @@ jobs:
             ssh $SSH_USER@$SSH_HOST "docker pull hnclonecphb/database:$CIRCLE_BRANCH
             docker stop database 
             docker rm database
-            docker run --name database --publish=27017:27017 -d hnclonecphb/database:$CIRCLE_BRANCH"
+            docker run --name database --network=hnclone-network -d hnclonecphb/database:$CIRCLE_BRANCH"
 workflows:
   version: 2
   build-and-deploy:
