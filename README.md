@@ -8,8 +8,8 @@ The given data set has been mapped to our own JSON data structure for Users and 
 ```
 vagrant@vagrant:/app$ sh database/testdata/import.sh
 ```
+***THIS IS STILL MISSING THE COMMAND FOR IMPORTING THE USERS.CSV...***
 
-<span style="color: red">THIS IS STILL MISSING THE COMMAND FOR IMPORTING THE USERS.CSV...</span>
 
 #### Database (MongoDB):
 We chose to use MongoDB for the Hackernews Project. We have two collections representing the Users and Items.
