@@ -54,3 +54,7 @@ Items can be identified either as a story or a comment, only depends on its "typ
   "type": "story"
 }
 ```
+##### Database Model
+![ER Diagram](https://github.com/ProjectHackernewsGroup04/Documentation/blob/master/images/ER.jpg)
+
+_The user can have many items, both stories and items._
