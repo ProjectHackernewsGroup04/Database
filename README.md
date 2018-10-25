@@ -1,10 +1,16 @@
 ### Hackernews Database:
 > Database repository is meant for initializing the database with entries for Items collection.
 
-#### Import Initial Data for Items
+#### Import Data for Items and Users
+The initial data has been taken from the added requirements for post_users and post_items, find the description [here](https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/assignments/03-Minimum_Requirements_and_API_Description.md) and the data set can be found in [here](https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/tree/master/assignments/03-Minimum_Requirements_and_API_Description).
+
+The given data set has been mapped to our own JSON data structure for Users and Items.
 ```
 vagrant@vagrant:/app$ sh database/testdata/import.sh
 ```
+
+<span style="color: red">THIS IS STILL MISSING THE COMMAND FOR IMPORTING THE USERS.CSV...</span>
+
 #### Database (MongoDB):
 We chose to use MongoDB for the Hackernews Project. We have two collections representing the Users and Items.
 
@@ -54,3 +60,7 @@ Items can be identified either as a story or a comment, only depends on its "typ
   "type": "story"
 }
 ```
+##### Database Model
+![ER Diagram](https://github.com/ProjectHackernewsGroup04/Documentation/blob/master/images/ER.jpg)
+
+_The user can have many items, both stories and items. On the other hand, an item may contain zero-to-many items itself, this relation represents a story having comments and a comment having replies/comments._
