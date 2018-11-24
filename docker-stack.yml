@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  database:
+    image: hnclonecphb/database:master
+    ports:
+      - 27017:27017
+    networks:
+      - hackernews_ops
+
+networks:
+  hackernews_ops:
+    external: true
