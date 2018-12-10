@@ -18,10 +18,7 @@ jobs:
       - run:
           name: Deploy over SSH
           command: |
-            ssh $SSH_USER@$SSH_HOST "docker pull hnclonecphb/database:$CIRCLE_BRANCH
-            docker stop database 
-            docker rm database
-            docker run --name database --network=hnclone-network -v /mongodb/data:/data/db -d hnclonecphb/database:$CIRCLE_BRANCH"
+            ssh $SSH_USER@$SSH_HOST "docker service update --mount-add type=bind,source=/mongodb/data,target=/data/db -d --image hnclonecphb/database:$CIRCLE_WORKFLOW_ID database"
 
 workflows:
   version: 2
